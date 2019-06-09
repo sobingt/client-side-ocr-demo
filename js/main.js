@@ -45,7 +45,10 @@
                 });
 
                 if (rearCameraIds.length) {
-                    deferred.resolve(rearCameraIds[0]);
+                    if(rearCameraIds[1])
+                        deferred.resolve(rearCameraIds[1]);
+                    else
+                        deferred.resolve(rearCameraIds[0]);
                 } else {
                     deferred.resolve(null);
                 }
